@@ -15,7 +15,7 @@ CREDENTIALS = (
 )
 FILE_FORMAT = (TYPE = JSON);
 
--- Optional: Preview raw review data
+--  Preview raw review data
 SELECT * FROM yelp_reviews LIMIT 1000;
 
 -- Step 2: Transform raw JSON to structured table and apply sentiment analysis
