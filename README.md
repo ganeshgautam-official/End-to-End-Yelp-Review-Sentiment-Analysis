@@ -1,5 +1,5 @@
 ## 📄 Project Overview
-This project focuses on building an end-to-end data pipeline for processing Yelp Review data for sentiment analysis and business insights generation.
+This project focuses on building an end-to-end data pipeline for processing Yelp Review data, which will be used for sentiment analysis and business insight generation.
 It covers data engineering tasks such as extraction, transformation, storage, and ingestion into Snowflake, followed by SQL-based analytics using a User-Defined Function (UDF) for sentiment classification.
 At the final stage, data analysis was performed by answering 10 key business questions, utilizing SQL Window Functions, Subqueries, Joins, Common Table Expressions (CTEs), and Grouping techniques to extract meaningful insights from the processed data.
 
@@ -32,15 +32,15 @@ At the final stage, data analysis was performed by answering 10 key business que
 - Loaded data into RAW tables in Snowflake using the COPY INTO command, ensuring optimized and scalable data transfer from S3.
 
 - Developed SQL scripts for loading the Yelp datasets:
-  -[yelp_review_load.sql](./Snowflake_Queries/yelp_reviews_tables.sql)
-  -[yelp_business_load.sql](./Snowflake_Queries/yelp_business_tables.sql) 
+  - [yelp_review_load.sql](./Snowflake_Queries/yelp_reviews_table.sql)
+  - [yelp_business_load.sql](./Snowflake_Queries/yelp_business_table.sql)
 
 ### 5. Flattening JSON Structure (Snowflake)
 - Flattened the nested JSON fields (especially reviews and business attributes) into a relational table structure using FLATTEN function.
 
 - SQL script to flatten the JSON into tabular format:
-  -[yelp review flatten](./Snowflake_Queries/yelp_reviews_tables.sql)
-  -[yelp business flatten](./Snowflake_Queries/yelp_business_tables.sql)
+  - [yelp review flatten](./Snowflake_Queries/yelp_reviews_table.sql)
+  - [yelp business flatten](./Snowflake_Queries/yelp_business_table.sql)
 
 ### 6. Sentiment Analysis (UDF Creation)
 - Created a Python UDF inside Snowflake to classify reviews as positive or negative.
