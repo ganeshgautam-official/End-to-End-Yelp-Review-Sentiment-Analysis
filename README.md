@@ -1,7 +1,7 @@
 ## 📄 Project Overview
 This project focuses on building an end-to-end data pipeline for processing Yelp Review data, which will be used for sentiment analysis and business insight generation.
-It covers data engineering tasks such as extraction, transformation, storage, and ingestion into Snowflake, followed by SQL-based analytics using a User-Defined Function (UDF) for sentiment classification.
-At the final stage, data analysis was performed by answering 10 key business questions, utilizing SQL Window Functions, Subqueries, Joins, Common Table Expressions (CTEs), and Grouping techniques to extract meaningful insights from the processed data.
+It covers data engineering tasks such as **extraction**, **transformation**, storage, and ingestion into **Snowflake Warehouse**, followed by SQL-based analytics using a User-Defined Function (UDF) for sentiment classification.
+At the final stage, data analysis was performed by answering 10 key business questions, utilizing SQL **Window Functions**, **Subqueries**, **Joins**, **Common Table Expressions (CTEs)**, and **Grouping** techniques to extract meaningful insights from the processed data.
 
 🔗 Dataset Source - [Yelp Open Dataset](https://business.yelp.com/data/resources/open-dataset/)
 
@@ -15,12 +15,12 @@ At the final stage, data analysis was performed by answering 10 key business que
 - The datasets were in semi-structured JSON format.
 
 ### 2. Data Preparation (Splitting Large JSON File)
-- Developed a Python program to split the Yelp Review JSON file into 10 smaller files (~500MB each) to make ingestion faster and manageable.
+- Developed a **Python Script** to split the Yelp Review JSON file into 10 smaller files (~500MB each) to make ingestion faster and manageable.
 
 - Python script used: [split_large_json.py](./Scripts/split_large_file.py)
 
 ### 3. Data Storage (Amazon S3)
-- Uploaded the split Review JSON files and Business JSON file into an Amazon S3 bucket.
+- Uploaded the split Review JSON files and Business JSON file into an **Amazon S3** bucket.
 
 - These files served as the source for ingestion into Snowflake.
 
@@ -36,7 +36,7 @@ At the final stage, data analysis was performed by answering 10 key business que
   - [yelp_business_load.sql](./Snowflake_Queries/yelp_business_table.sql)
 
 ### 5. Flattening JSON Structure (Snowflake)
-- Flattened the nested JSON fields (especially reviews and business attributes) into a relational table structure using FLATTEN function.
+- Flattened the nested JSON fields (especially reviews and business attributes) into a relational table structure using the FLATTEN function.
 
 - SQL script to flatten the JSON into tabular format:
   - [yelp review flatten](./Snowflake_Queries/yelp_reviews_table.sql)
